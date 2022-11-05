@@ -7,11 +7,13 @@ public class MenuButton : MonoBehaviour
 {
     Animator animator;
     MainMenuManager menuManager;
+    private soundEffects SFX;
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         menuManager = GameObject.Find("MenuBackground").GetComponent<MainMenuManager>();
+        SFX = GameObject.Find("SoundEffects").GetComponent<soundEffects>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,6 @@ public class MenuButton : MonoBehaviour
     }
     public void StartButton()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void back()
