@@ -28,6 +28,7 @@ public class MenuButton : MonoBehaviour
     }
     public void StartButton()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void back()
