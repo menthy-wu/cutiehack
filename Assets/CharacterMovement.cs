@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+    public Animator animator;
     // Start is called before the first frame update'
 
     float horizontalMove = 0f;
