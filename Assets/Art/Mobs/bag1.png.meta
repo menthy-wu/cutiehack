@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39787c066be7e9d4a8d7e55c2e1f1497
+guid: e369781fb1566354bae64617acceea2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oily1_0
+      name: bag1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bbbd9a53a42a9a44bff2b734ba1d39f
-      internalID: -1334397626
+      spriteID: 3df21464d001b764c9f84e9a91d3129a
+      internalID: -1566858353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oily1_1
+      name: bag1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5ff4c93af835174d870ecf305ce0933
-      internalID: 1146860125
+      spriteID: 631b7207aac9be34ca70fec3c024f738
+      internalID: -1675849084
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      oily1_1: 1146860125
-      oily1_0: -1334397626
+      bag1_1: -1675849084
+      bag1_0: -1566858353
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
