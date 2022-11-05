@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
     // Start is called before the first frame update
+    
+
+    
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>(); // game object is thing that script is attatched to
-
+        
         Debug.Log("testing");
     }
 
@@ -18,6 +21,15 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W)){
             rb.velocity = new Vector2(0, 5);
+        }        
+        if(Input.GetKeyDown(KeyCode.A)){
+            rb.velocity = new Vector2(-5, 0);
+        }
+        if(Input.GetKeyDown(KeyCode.D)){
+            rb.velocity = new Vector2(5, 0);
+        }        
+        if(Input.GetKeyDown(KeyCode.S)){
+            Debug.Log("Climb Down");
         }
     }
 }
