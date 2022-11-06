@@ -36,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if(Input.GetKeyDown(KeyCode.W)){
+        if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)){
             jump = true;
             animator.SetBool("jump", true);
         
