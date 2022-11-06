@@ -11,7 +11,18 @@ public class CharacterMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed  = 40f;
     bool jump = false;
+    public GameObject bullet;
 
+    public void shoot()
+    {
+        GameObject projectilePrefab = Instantiate(bullet);
+        projectilePrefab.transform.position = transform.position;
+        if(transform.localScale.x < 0)
+        projectilePrefab.GetComponent<bulletM>().right = false;
+        else{
+            projectilePrefab.GetComponent<bulletM>().right = true;
+        }
+    }
     void Start()
     {
         
@@ -31,6 +42,7 @@ public class CharacterMovement : MonoBehaviour
         }
         if(Input.GetButtonDown("Fire1")){
             animator.SetBool("Fire", true);
+            shoot();
         }
 
         //get input

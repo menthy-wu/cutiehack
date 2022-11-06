@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W)){
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)){
             rb.velocity = new Vector2(0, 5);
         }        
         if(Input.GetKeyDown(KeyCode.A)){

@@ -14,6 +14,8 @@ public class MenthyPlayer : MonoBehaviour
     public Transform graoundCheck;
     public Animator anmi;
     public LayerMask groundLayer;
+    public Transform shootinPoints;
+    public GameObject bullet;
 
     void Start()
     {
@@ -53,5 +55,14 @@ public class MenthyPlayer : MonoBehaviour
     {
         return Physics2D.OverlapCircle(graoundCheck.position, 1f, groundLayer);
     }
-
+    public void shoot()
+    {
+        GameObject projectilePrefab = Instantiate(bullet);
+        projectilePrefab.transform.position = transform.position;
+        if(transform.localScale.x < 0)
+        projectilePrefab.GetComponent<bulletM>().right = false;
+        else{
+            projectilePrefab.GetComponent<bulletM>().right = true;
+        }
+    }
 }
