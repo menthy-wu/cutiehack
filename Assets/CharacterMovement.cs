@@ -58,5 +58,16 @@ public class CharacterMovement : MonoBehaviour
         //move character
         controller.Move(horizontalMove* Time.fixedDeltaTime, false, jump);
         jump = false;
-    }
+    }	private void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.tag == "enemy")
+		{
+			die();
+		}
+		
+	}
+	private void die() {
+		{
+			Debug.Log("die");
+		}
+	}
 }
