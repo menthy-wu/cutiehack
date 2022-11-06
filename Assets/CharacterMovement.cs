@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+    public Animator animator;
     // Start is called before the first frame update'
 
     float horizontalMove = 0f;
@@ -19,13 +20,26 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("Fire", false);
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+
         if(Input.GetKeyDown(KeyCode.W)){
             jump = true;
+            animator.SetBool("jump", true);
         
+        }
+        if(Input.GetButtonDown("Fire1")){
+            animator.SetBool("Fire", true);
         }
         //get input
     }
+
+    public void OnLanding (){
+        animator.SetBool("jump", false);
+    }
+
+
     void FixedUpdate ()
     {
         //move character
