@@ -32,6 +32,9 @@ public class AIPatrol : MonoBehaviour
 
     }
 
+		private void OnTriggerEnter2D(Collider2D other) {
+			Destroy(gameObject);
+		}
     private void FixedUpdate(){
         if(mustPatrol){
             //2d physics overlap circle

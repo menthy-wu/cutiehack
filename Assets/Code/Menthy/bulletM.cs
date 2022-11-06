@@ -27,12 +27,11 @@ public class bulletM : MonoBehaviour
      yield return new WaitForSeconds(5f);
      Destroy(gameObject);
  }
-
- private void OnTriggerEnter(Collider other) {
+private void OnTriggerEnter2D(Collider2D other) {
     if(other.gameObject.tag == "ground")
     {
      Destroy(gameObject);
     }
     
- }
+}
 }
