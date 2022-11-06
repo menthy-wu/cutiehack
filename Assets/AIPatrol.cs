@@ -35,7 +35,13 @@ public class AIPatrol : MonoBehaviour
     private void FixedUpdate(){
         if(mustPatrol){
             //2d physics overlap circle
+            // RaycastHit2D groundInfo = Physics2D.Raycast(groundCheckPos.position, Vector2.down,2f);
+            // if(groundInfo.collider == false){
+            //     mustTurn = true;
+            //     Debug.Log("groundcheckpos triggered");
+            // }
             mustTurn = false;
+            
             //!Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
             //returns true if circle contains ground
         }
