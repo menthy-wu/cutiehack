@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Menthy Wu\nRose \nAmilia\nAditi"
+  m_text: "Menthy Wu\nRose Wong\nAmelia Schoch \nAditi Thanekar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a42b71591ec64841a044434c76d02cd, type: 2}
   m_sharedMaterial: {fileID: -5428209276396975979, guid: 9a42b71591ec64841a044434c76d02cd, type: 2}
@@ -2074,8 +2074,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: 220}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 516, y: 137}
+  m_SizeDelta: {x: 641.6245, y: 180.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2099948923
 Animator:
@@ -2117,7 +2117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name of the Game
+  m_text: Cutie Saves The World
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c08a6d938a6fab94dbd55ff94911c4eb, type: 2}
   m_sharedMaterial: {fileID: 6019626026450857151, guid: c08a6d938a6fab94dbd55ff94911c4eb, type: 2}
