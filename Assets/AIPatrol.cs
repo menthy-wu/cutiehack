@@ -15,10 +15,12 @@ public class AIPatrol : MonoBehaviour
     public Transform groundCheckPos;
     public LayerMask groundLayer;
     public Collider2D bodyCollider;
+    //private int damage;
 
     void Start()
     {
         mustPatrol = true;
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -27,21 +29,26 @@ public class AIPatrol : MonoBehaviour
         if(mustPatrol){
             Patrol();
         }
+
     }
 
     private void FixedUpdate(){
         if(mustPatrol){
             //2d physics overlap circle
-            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+            mustTurn = false;
+            //!Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
             //returns true if circle contains ground
         }
     }
 
     void Patrol(){
+        //down drop or touch wall- make sure not to put mob touching floor
         if(mustTurn || bodyCollider.IsTouchingLayers(groundLayer)){
            Flip();
+           Debug.Log("flip triggered");
         }
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        //Debug.Log("mob move");
     }
 
     void Flip(){

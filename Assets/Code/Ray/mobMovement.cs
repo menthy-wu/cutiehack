@@ -18,6 +18,6 @@ public class mobMovement : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(1,0);
-        Debug.Log("mob move");
+        //Debug.Log("mob move");
     }
 }
