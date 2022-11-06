@@ -32,6 +32,8 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetButtonDown("Fire1")){
             animator.SetBool("Fire", true);
         }
+
+        Debug.Log(transform.rotation.y);
         //get input
     }
 
