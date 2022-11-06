@@ -33,7 +33,6 @@ public class CharacterMovement : MonoBehaviour
             animator.SetBool("Fire", true);
         }
 
-        Debug.Log(transform.rotation.y);
         //get input
     }
 
