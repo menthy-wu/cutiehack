@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    public GameObject GAMEOVER;
     // Start is called before the first frame update'
 
     float horizontalMove = 0f;
@@ -35,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if(Input.GetKeyDown(KeyCode.W)){
+        if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)){
             jump = true;
             animator.SetBool("jump", true);
         
@@ -67,7 +68,8 @@ public class CharacterMovement : MonoBehaviour
 	}
 	private void die() {
 		{
-			Debug.Log("die");
+            GAMEOVER.SetActive(true);
+            Destroy(gameObject);
 		}
 	}
 }

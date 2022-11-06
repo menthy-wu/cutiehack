@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8785724393543632359}
   m_Layer: 0
   m_Name: bag1_0
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.008282602, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.34263092
 --- !u!114 &8785724393543632378
 MonoBehaviour:
   m_ObjectHideFlags: 0

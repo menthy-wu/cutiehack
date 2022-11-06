@@ -171,7 +171,9 @@ namespace Pathfinding {
 		public Path GetCurrentPath () {
 			return path;
 		}
-
+		private void OnTriggerEnter2D(Collider2D other) {
+			Destroy(gameObject);
+		}
 		/// <summary>
 		/// Stop calculating the current path request.
 		/// If this Seeker is currently calculating a path it will be canceled.
