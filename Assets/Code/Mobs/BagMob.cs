@@ -23,7 +23,6 @@ public class BagMob : MonoBehaviour
     {
         if(playerInRange())
         {
-            // Vector3 toTarget = (player.position-transform.position).normalized();
             rb.velocity = (player.position-transform.position).normalized;
         }
         else
