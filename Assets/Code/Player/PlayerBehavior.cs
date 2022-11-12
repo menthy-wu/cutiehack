@@ -32,8 +32,16 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetFloat("xspeed", abs(horizontalInput));
         Move();
         if(Input.GetButtonDown("Fire1")){
+            
+            animator.SetBool("jump", false);
             animator.SetBool("throw", true);
             shoot();
+        }
+        else if((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.W)) && isGrounded() && !animator.GetBool("throw"))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y+jumpPower);
+            animator.SetBool("jump", true);
+            
         }
         
         if(Input.GetKeyDown(KeyCode.LeftShift)){
@@ -63,12 +71,6 @@ public class PlayerBehavior : MonoBehaviour
             {
                 facingRight = false;
             }
-        }
-        if((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.W)) && isGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y+jumpPower);
-            animator.SetBool("jump", true);
-            
         }
          if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >1)
         {
